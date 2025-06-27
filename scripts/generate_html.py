@@ -4,7 +4,7 @@ import html
 
 TOPIC_MAP = {
     "kubernetes": {
-        "icon": "https://openmoji.org/data/color/svg/E5B4.svg",
+        "icon": "https://kubernetes.io/icons/favicon-64.png",
         "url": "https://kubernetes.io/"
     },
     "observability": {
@@ -35,19 +35,11 @@ def generate_html(input_csv, output_file):
         reader = csv.DictReader(csvfile)
         for row in reader:
             country = row['country_code']
-            event = f'<a href="{row["event_url"]}">{row["event_name"]}</a>'
+            event = f'<a href="{row["event_url"]}" target="_blank" rel="noopener noreferrer">{row["event_name"]}</a>'
             date = row['date']
-            talk = f'<a href="{row["talk_url"]}">{row["talk_title"]}</a>'
+            talk = f'<a href="{row["talk_url"]}" target="_blank" rel="noopener noreferrer">{row["talk_title"]}</a>'
             if row.get("co_speaker"):
                 talk += f'<br><small>with {html.escape(row["co_speaker"])}</small>'
-
-            assets = []
-            if row.get("slides_url"):
-                assets.append(f'<a href="{row["slides_url"]}"><img src="https://openmoji.org/data/color/svg/1F4CA.svg" width="25px" title="Slides"></a>')
-            if row.get("video_url"):
-                assets.append(f'<a href="{row["video_url"]}"><img src="https://openmoji.org/data/color/svg/E044.svg" width="25px" title="Video"></a>')
-            if row.get("github_url"):
-                assets.append(f'<a href="{row["github_url"]}"><img src="https://openmoji.org/data/color/svg/E045.svg" width="25px" title="GitHub"></a>')
 
             topic_icons = []
             topics = row.get("topics", "").split(";")
@@ -56,9 +48,19 @@ def generate_html(input_csv, output_file):
                 if topic and topic in TOPIC_MAP:
                     icon = TOPIC_MAP[topic]['icon']
                     link = TOPIC_MAP[topic]['url']
-                    topic_icons.append(f'<a href="{link}" title="{topic}"><img src="{icon}" width="25px"></a>')
+                    topic_icons.append(f'<a href="{link}" title="{topic}" target="_blank" rel="noopener noreferrer"><img src="{icon}" width="25px"></a>')
 
-            html_row = f"<tr><td>{country}</td><td>{event}</td><td>{date}</td><td>{talk}</td><td>{' '.join(assets)}</td><td>{' '.join(topic_icons)}</td></tr>"
+            assets = []
+            if row.get("video_url"):
+                assets.append(f'<a href="{row["video_url"]}" target="_blank" rel="noopener noreferrer"><img src="https://openmoji.org/data/color/svg/E044.svg" width="25px" title="Video"></a>')
+            if row.get("photo_url"):
+                assets.append(f'<a href="{row["photo_url"]}" target="_blank" rel="noopener noreferrer"><img src="https://openmoji.org/data/color/svg/1F4F8.svg" width="25px" title="Fotos"></a>')
+            if row.get("slides_url"):
+                assets.append(f'<a href="{row["slides_url"]}" target="_blank" rel="noopener noreferrer"><img src="https://openmoji.org/data/color/svg/1F4CA.svg" width="25px" title="Slides"></a>')
+            if row.get("github_url"):
+                assets.append(f'<a href="{row["github_url"]}" target="_blank" rel="noopener noreferrer"><img src="https://openmoji.org/data/color/svg/E045.svg" width="25px" title="GitHub"></a>')
+
+            html_row = f"<tr><td>{country}</td><td>{event}</td><td>{date}</td><td>{talk}</td><td>{' '.join(topic_icons)}</td><td>{' '.join(assets)}</td></tr>"
             rows.append(html_row)
 
     html_table = """
@@ -67,7 +69,7 @@ def generate_html(input_csv, output_file):
     <body>
     <h1>Talks</h1>
     <table border="1" cellspacing="0" cellpadding="6">
-        <tr><th>Country</th><th>Event</th><th>Date</th><th>Title</th><th>Assets</th><th>Topics</th></tr>
+        <tr><th>Country</th><th>Event</th><th>Date</th><th>Title</th><th>Topics</th><th>Assets</th></tr>
         {}
     </table>
     </body>
