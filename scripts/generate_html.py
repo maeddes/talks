@@ -3,17 +3,25 @@ import os
 import html
 
 TOPIC_MAP = {
-    "kubernetes": {
-        "icon": "https://kubernetes.io/icons/favicon-64.png",
-        "url": "https://kubernetes.io/"
+    "springboot": {
+        "icon": "https://start.spring.io/images/icon-48x48.png",
+        "url": "https://spring.io/projects/spring-boot"
     },
-    "observability": {
-        "icon": "https://openmoji.org/data/color/svg/1F441-FE0F-200D-1F5E8-FE0F.svg",
-        "url": "https://opentelemetry.io/"
+    "buildpacks": {
+        "icon": "https://buildpacks.io/images/favicon.png",
+        "url": "https://buildpacks.io/"
     },
-    "cloud": {
-        "icon": "https://openmoji.org/data/color/svg/2601.svg",
-        "url": "https://cloud.google.com/"
+    "graalvm": {
+        "icon": "https://www.graalvm.org/resources/img/favicon/favicon-light/favicon-light.ico",
+        "url": "https://www.graalvm.org/"
+    },
+    "docker": {
+        "icon": "https://www.docker.com/app/uploads/2024/02/cropped-docker-logo-favicon-192x192.png",
+        "url": "https://www.docker.com/"
+    },
+    "testcontainer": {
+        "icon": "https://testcontainers.com/favicon.ico",
+        "url": "https://testcontainers.com/"
     },
     "codespaces": {
         "icon": "https://openmoji.org/data/color/svg/1F5A5.svg",
@@ -60,8 +68,9 @@ def generate_html(input_csv, output_file):
             if row.get("github_url"):
                 assets.append(f'<a href="{row["github_url"]}" target="_blank" rel="noopener noreferrer"><img src="https://openmoji.org/data/color/svg/E045.svg" width="25px" title="GitHub"></a>')
 
-            html_row = f"<tr><td>{country}</td><td>{event}</td><td>{date}</td><td>{talk}</td><td>{' '.join(topic_icons)}</td><td>{' '.join(assets)}</td></tr>"
-            rows.append(html_row)
+            if row.get("event_name"):
+                html_row = f"<tr><td>{country}</td><td>{event}</td><td>{date}</td><td>{talk}</td><td>{' '.join(topic_icons)}</td><td>{' '.join(assets)}</td></tr>"
+                rows.append(html_row)
 
     html_table = """
     <html>

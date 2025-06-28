@@ -1,3 +1,10 @@
 country_code,event_name,event_url,date,talk_title,talk_url,slides_url,video_url,github_url,photo_url,topics,co_speaker
-GB,Devoxx UK,https://www.devoxx.co.uk/,2024-05-10,OpenTelemetry Lab,https://devoxx.co.uk/talk?id=16201,https://speakerdeck.com/maeddes/opentelemetry,,https://github.com/NovatecConsulting/opentelemetry-training,https://flickr.com/photos/bejug/53754441776/in/faves-200808366@N03/,opentelemetry;java;python;docker;kubernetes,Jan-Niklas Tille
+ESP,Spring IO,https://2025.springio.net/,2025-05-22,What's new with Spring Boot and Containers,https://2025.springio.net/sessions/whats-new-with-spring-boot-and-containers/,https://speakerdeck.com/maeddes/whats-new-with-spring-boot-and-containers,https://www.youtube.com/watch?v=nesRmaUi4Ts,https://github.com/maeddes/spring-boot-and-container,https://flickr.com/photos/198207824@N04/54557819528/in/faves-200808366@N03/,springboot;buildpacks;graalvm;docker;testcontainer,Eva Maria Panadero Peris
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+GB,Devoxx UK,https://www.devoxx.co.uk/,2024-05-10,OpenTelemetry Lab,https://devoxx.co.uk/talk?id=16201,https://speakerdeck.com/maeddes/opentelemetry,,https://github.com/NovatecConsulting/opentelemetry-training,https://flickr.com/photos/bejug/53754441776/in/faves-200808366@N03/,opentelemetry;java;python;docker,Jan-Niklas Tille
 GB,Devoxx UK,https://www.devoxx.co.uk/,2024-05-09,Cloud-Based IDEs,https://www.devoxx.co.uk/talk/?id=16201,https://speakerdeck.com/maeddes/cloud-and-container-based-integrated-development-environments,https://www.youtube.com/watch?v=cHANzfTPNLo,,https://flickr.com/photos/bejug/53754441776/in/faves-200808366@N03/,codespaces;gitpod;devpod;devcontainer,

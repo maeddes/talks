@@ -4,7 +4,7 @@ import requests
 CSV_URL = "https://docs.google.com/spreadsheets/d/1TW71wIFpP9u2jedjqvU8-B9NhDwQIgfUqR-T5IZcbkQ/export?format=csv&gid=0"
 
 # Output file path
-OUTPUT_FILE = "talks.csv"
+OUTPUT_FILE = "data/download.csv"
 
 def download_csv():
     print(f"Downloading CSV from: {CSV_URL}")
