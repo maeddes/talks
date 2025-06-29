@@ -1,6 +1,6 @@
 # talks
 
-pip install httpserver
+Prereq: pip install httpserver
 
 python scripts/fetch_csv.py
 
