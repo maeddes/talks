@@ -9,6 +9,7 @@ OUTPUT_FILE = "data/download.csv"
 def download_csv():
     print(f"Downloading CSV from: {CSV_URL}")
     response = requests.get(CSV_URL)
+    response.encoding = "utf-8"  # Make sure UTF-8 is used!
     response.raise_for_status()
 
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:

@@ -11,6 +11,10 @@ TOPIC_MAP = {
         "icon": "https://buildpacks.io/images/favicon.png",
         "url": "https://buildpacks.io/"
     },
+    "paketo": {
+        "icon": "https://paketo.io/v2/images/logo-paketo-light.svg",
+        "url": "https://paketo.io/"
+    },
     "graalvm": {
         "icon": "https://www.graalvm.org/resources/img/favicon/favicon-light/favicon-light.ico",
         "url": "https://www.graalvm.org/"
@@ -19,12 +23,16 @@ TOPIC_MAP = {
         "icon": "https://www.docker.com/app/uploads/2024/02/cropped-docker-logo-favicon-192x192.png",
         "url": "https://www.docker.com/"
     },
+    "java": {
+        "icon": "https://wiki.openjdk.org/plugins/servlet/theme/engine/resource/OPENJDKV1/nanoduke.ico",
+        "url": "https://www.java.com/"
+    },
     "testcontainer": {
         "icon": "https://testcontainers.com/favicon.ico",
         "url": "https://testcontainers.com/"
     },
     "codespaces": {
-        "icon": "https://openmoji.org/data/color/svg/1F5A5.svg",
+        "icon": "https://github.githubassets.com/favicons/favicon.png",
         "url": "https://github.com/features/codespaces"
     },
     "gitpod": {
@@ -42,10 +50,10 @@ def generate_html(input_csv, output_file):
     with open(input_csv, newline='', encoding='utf-8') as csvfile:
         reader = csv.DictReader(csvfile)
         for row in reader:
-            country = row['country_code']
-            event = f'<a href="{row["event_url"]}" target="_blank" rel="noopener noreferrer">{row["event_name"]}</a>'
+            country = html.escape(row['country_code'])
+            event = f'<a href="{row["event_url"]}" target="_blank" rel="noopener noreferrer">{html.escape(row["event_name"])}</a>'
             date = row['date']
-            talk = f'<a href="{row["talk_url"]}" target="_blank" rel="noopener noreferrer">{row["talk_title"]}</a>'
+            talk = f'<a href="{row["talk_url"]}" target="_blank" rel="noopener noreferrer">{html.escape(row["talk_title"])}</a>'
             if row.get("co_speaker"):
                 talk += f'<br><small>with {html.escape(row["co_speaker"])}</small>'
 
@@ -56,7 +64,7 @@ def generate_html(input_csv, output_file):
                 if topic and topic in TOPIC_MAP:
                     icon = TOPIC_MAP[topic]['icon']
                     link = TOPIC_MAP[topic]['url']
-                    topic_icons.append(f'<a href="{link}" title="{topic}" target="_blank" rel="noopener noreferrer"><img src="{icon}" width="25px"></a>')
+                    topic_icons.append(f'<a href="{link}" title="{topic}" target="_blank" rel="noopener noreferrer"><img src="{icon}" height="25px"></a>')
 
             assets = []
             if row.get("video_url"):
@@ -73,11 +81,35 @@ def generate_html(input_csv, output_file):
                 rows.append(html_row)
 
     html_table = """
+    <!DOCTYPE html>
     <html>
-    <head><title>Talks</title></head>
-    <body>
+    <head>
+        <title>Talks</title>
+        <meta charset="UTF-8">
+    </head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.2.0/github-markdown.min.css">
+    <body class="markdown-body">
     <h1>Talks</h1>
     <table border="1" cellspacing="0" cellpadding="6">
+        <thead>
+            <tr>
+            <th style="text-align:center;">
+                <img src="https://openmoji.org/data/color/svg/1F5FA.svg" width="40px" title="Country">
+            </th>
+            <th style="text-align:center;">
+                <img src="https://openmoji.org/data/color/svg/1F3A1.svg" width="40px" title="Event">
+            </th>
+            <th style="text-align:center;">
+                <img src="https://openmoji.org/data/color/svg/1F4C5.svg" width="40px" title="Date">
+            </th>
+            <th style="text-align:center;">
+                <img src="https://openmoji.org/data/color/svg/1F4AC.svg" width="40px" title="Talk">
+            </th>
+            <th style="text-align:center;">
+                <img src="https://openmoji.org/data/color/svg/E269.svg" width="40px" title="Links">
+            </th>
+            </tr>
+        </thead>
         <tr><th>Country</th><th>Event</th><th>Date</th><th>Title</th><th>Topics</th><th>Assets</th></tr>
         {}
     </table>

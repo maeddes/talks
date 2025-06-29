@@ -1,1 +1,1 @@
-cp ./output/ind  ./index.html
+cp ./output/index.html  ./index.html
