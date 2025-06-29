@@ -106,11 +106,14 @@ def generate_html(input_csv, output_file):
                 <img src="https://openmoji.org/data/color/svg/1F4AC.svg" width="40px" title="Talk">
             </th>
             <th style="text-align:center;">
+                <img src="https://openmoji.org/data/color/svg/E259.svg" width="40px" title="Topics">
+            </th>
+            <th style="text-align:center;">
                 <img src="https://openmoji.org/data/color/svg/E269.svg" width="40px" title="Links">
             </th>
             </tr>
         </thead>
-        <tr><th>Country</th><th>Event</th><th>Date</th><th>Title</th><th>Topics</th><th>Assets</th></tr>
+        <tr><th>Country</th><th>Event</th><th>Date</th><th>Title</th><th>Tech Topics</th><th>Links to Assets</th></tr>
         {}
     </table>
     </body>
