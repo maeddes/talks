@@ -23,6 +23,10 @@ TOPIC_MAP = {
         "icon": "https://www.docker.com/app/uploads/2024/02/cropped-docker-logo-favicon-192x192.png",
         "url": "https://www.docker.com/"
     },
+    "kubernetes": {
+        "icon": "https://kubernetes.io/icons/favicon-64.png",
+        "url": "https://www.kubernetes.io/"
+    },
     "java": {
         "icon": "https://wiki.openjdk.org/plugins/servlet/theme/engine/resource/OPENJDKV1/nanoduke.ico",
         "url": "https://www.java.com/"
@@ -36,13 +40,47 @@ TOPIC_MAP = {
         "url": "https://github.com/features/codespaces"
     },
     "gitpod": {
-        "icon": "https://openmoji.org/data/color/svg/1F4BB.svg",
+        "icon": "https://www.gitpod.io/favicon192.png",
         "url": "https://www.gitpod.io/"
     },
     "devpod": {
-        "icon": "https://openmoji.org/data/color/svg/1F4F1.svg",
+        "icon": "https://cdn.prod.website-files.com/645b6806227d4a212e2d01ca/67d8d69cb6c27444ff45d9c0_Favicon.png",
         "url": "https://devpod.sh/"
+    },
+    "opentelemetry": {
+        "icon": "https://opentelemetry.io/favicons/favicon.ico",
+        "url": "https://opentelemetry.io/"
+    },
+    "jaeger": {
+        "icon": "https://www.jaegertracing.io/favicon.ico",
+        "url": "https://www.jaegertracing.io/"
+    },
+    "kiali": {
+        "icon": "https://cdn.prod.website-files.com/645b6806227d4a212e2d01ca/67d8d69cb6c27444ff45d9c0_Favicon.png",
+        "url": "https://devpod.sh/"
+    },
+    "istio": {
+        "icon": "https://istio.io/latest/favicons/favicon.ico",
+        "url": "https://istio.io/"
+    },
+    "prometheus": {
+        "icon": "https://prometheus.io/icon.svg",
+        "url": "https://prometheus.io/"
+    },
+    "grafana": {
+        "icon": "https://grafana.com/static/assets/img/fav32.png",
+        "url": "https://grafana.com/"
+    },
+    "cilium": {
+        "icon": "https://cilium.io/favicon-32x32.png",
+        "url": "https://cilium.io/"
+    },
+    "ebpf": {
+        "icon": "https://ebpf.io/favicon-32x32.png",
+        "url": "https://ebpf.io/"
     }
+
+
 }
 
 def generate_html(input_csv, output_file):
