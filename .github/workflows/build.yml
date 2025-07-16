@@ -2,9 +2,10 @@ name: Build & Deploy Talks Page
 
 on:
   push:
-    branches: [main]  # or "master", depending on your default branch
-  workflow_dispatch:  # allows manual triggering
-
+    branches: [main]  
+  workflow_dispatch:  
+  schedule:
+    - cron: '0 6 * * *' # every day at 06:00 UTC
 permissions:
   contents: write
 
@@ -32,7 +33,7 @@ jobs:
 
       - name: Commit and push generated HTML
         run: |
-          git config user.name "github-actions[bot]"
+          git config user.name "Matthias[bot]"
           git config user.email "maeddes@gmail.com"
           git add .
           git commit -m "Update generated index.html" || echo "No changes to commit"
