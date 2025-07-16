@@ -23,7 +23,8 @@ jobs:
 
       - name: Generate HTML
         run: |
-          all.sh
+          pwd
+          ./all.sh
 
       # - name: Deploy to GitHub Pages
       #   uses: peaceiris/actions-gh-pages@v3
