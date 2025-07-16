@@ -1,15 +1,27 @@
 country_code,event_name,event_url,date,talk_title,talk_url,slides_url,video_url,github_url,photo_url,topics,co_speaker
+DE,CloudLand,https://www.cloudland.org/de/home/,2025-07-02,Standardisierte Observability mit OpenTelemetry,https://meine.doag.org/events/cloudland/2025/agenda/#agendaId.5850,https://speakerdeck.com/maeddes/standardized-observability-with-opentelemetry,,https://github.com/NovatecConsulting/opentelemetry-training,,opentelemetry;java;python;jaeger;grafana,Jens Plüddemann
+DE,Mastering Observabiltiy,https://www.mastering-obs.de/,2025-06-05,Standardisierte Observability mit OpenTelemetry,https://www.mastering-obs.de/veranstaltung-83529-se-0-standardisierte-observability-mit-opentelemetry.html,https://speakerdeck.com/maeddes/standardized-observability-with-opentelemetry,,https://github.com/NovatecConsulting/opentelemetry-training,,opentelemetry;java;python;jaeger;prometheus,Jens Plüddemann
 ESP,Spring IO,https://2025.springio.net/,2025-05-22,What's new with Spring Boot and Containers,https://2025.springio.net/sessions/whats-new-with-spring-boot-and-containers/,https://speakerdeck.com/maeddes/whats-new-with-spring-boot-and-containers,https://www.youtube.com/watch?v=nesRmaUi4Ts,https://github.com/maeddes/spring-boot-and-container,https://flickr.com/photos/198207824@N04/54557819528/in/faves-200808366@N03/,springboot;buildpacks;graalvm;docker;testcontainer,Eva Maria Panadero Peris
 NL,Voxxed Days Amsterdam,https://amsterdam.voxxeddays.com/,2025-04-03,"Dockerfiles, Buildpacks, Jib and more ... what's the best way to run your Java code in Containers?",https://amsterdam.voxxeddays.com/talk/?id=7159,https://speakerdeck.com/maeddes/options-galore-from-source-code-to-container-image,,,,java;docker;buildpacks;paketo;jib,
 CH,Voxxed Days Zurich,https://zurich.voxxeddays.com/,2025-03-25,"Dockerfiles, Buildpacks, Jib and more ... what's the best way to run your Java code in Containers?",https://zurich.voxxeddays.com/talk/?id=4912,https://speakerdeck.com/maeddes/options-galore-from-source-code-to-container-image,,,,java;docker;buildpacks;paketo;jib,
 DE,OOP Konferenz,https://www.oop-konferenz.de/de,2025-02-06,"Codespaces, Gitpod, Devpod ... was cloud- und container-basierte IDEs können",https://www.oop-konferenz.de/de/programm/konferenzprogramm/details/codespaces-gitpod-devpod-was-cloud-und-container-basierte-ides-koennen,https://speakerdeck.com/maeddes/cloud-and-container-based-integrated-development-environments,,,,codespaces;gitpod;devpod;devcontainer;java,
-CH,Voxxed Days CERN,https://cern.voxxeddays.com/,2015-01-15,"Dockerfiles, Buildpacks, Jib and more ... what's the best way to run your Java code in Containers?",https://cern.voxxeddays.com/talk/dockerfiles-buildpacks-jib-and-more-what-s-the-best-way-to-run-your-java-code-in-containers-/,,,,,java;docker;buildpacks;paketo;jib,
-DE,IT Tage,https://www.ittage.informatik-aktuell.de/index.html,2024-12-10,Standardisierte Observability mit OpenTelemetry,https://www.ittage.informatik-aktuell.de/programm/2024/standardisierte-observability-mit-opentelemetry.html,,,https://github.com/NovatecConsulting/opentelemetry-training,,opentelemetry;java;python;jaeger;opensearch,Jens Plüddemann
+CH,Voxxed Days CERN,https://cern.voxxeddays.com/,2025-01-15,"Dockerfiles, Buildpacks, Jib and more ... what's the best way to run your Java code in Containers?",https://cern.voxxeddays.com/talk/dockerfiles-buildpacks-jib-and-more-what-s-the-best-way-to-run-your-java-code-in-containers-/,,,,,java;docker;buildpacks;paketo;jib,
+DE,IT Tage,https://www.ittage.informatik-aktuell.de/index.html,2024-12-10,Standardisierte Observability mit OpenTelemetry,https://www.ittage.informatik-aktuell.de/programm/2024/standardisierte-observability-mit-opentelemetry.html,https://speakerdeck.com/maeddes/standardized-observability-with-opentelemetry,,https://github.com/NovatecConsulting/opentelemetry-training,,opentelemetry;java;python;jaeger;opensearch,Jens Plüddemann
 SWE,Øredev,https://archive.oredev.org/2024/#/,2024-11-07,"Distributed applications and Kubernetes: Better off with frameworks, service meshes or both",https://archive.oredev.org/2024/#/program,https://speakerdeck.com/maeddes/distributed-systems-patterns-spring-cloud-service-mesh-and-ebpf,,,,springboot;kubernetes;istio;ebpf;cilium,
 SWE,Øredev,https://archive.oredev.org/2024/#/,2024-11-07,A hitchhikers guide to observe (Java) applications in Kubernetes,https://archive.oredev.org/2024/#/program,https://speakerdeck.com/maeddes/whats-going-on-in-my-cluster,,,,kubernetes;java;opentelemetry;jaeger,
 BE,Devoxx Belgium,https://devoxx.be/,2024-10-09,OpenTelemetry Lab,,,,,,opentelemetry;java;python;jaeger;prometheus,Jens Plüddemann
 MOR,Devoxx Morocco,https://devoxx.ma/,2024-10-02,Distributed Systems,,,,,,,
 DE,Novatec Summit,,2024-09-07,Java & AI,,,,,,,
+DE,DWX Developer,https://www.developer-world.de/dwx,2024-07-03,,,,,,,,
 DE,KCD Munich,,2024-07-02,Observability Talk,,,,,,,
+PL,Devoxx Poland,,,,,,,,,,
+DE,CloudLand,https://www.cloudland.org/de/home/,,,,,,,,,
+DE,JCON,,2024-05-16,Cloud IDE,,,,,,,
 GB,Devoxx UK,https://www.devoxx.co.uk/,2024-05-10,OpenTelemetry Lab,https://devoxx.co.uk/talk?id=16201,https://speakerdeck.com/maeddes/opentelemetry,,https://github.com/NovatecConsulting/opentelemetry-training,https://flickr.com/photos/bejug/53754441776/in/faves-200808366@N03/,opentelemetry;java;python;docker,Jan-Niklas Tille
 GB,Devoxx UK,https://www.devoxx.co.uk/,2024-05-09,Cloud-Based IDEs,https://www.devoxx.co.uk/talk/?id=16201,https://speakerdeck.com/maeddes/cloud-and-container-based-integrated-development-environments,https://www.youtube.com/watch?v=cHANzfTPNLo,,https://flickr.com/photos/bejug/53754441776/in/faves-200808366@N03/,codespaces;gitpod;devpod;devcontainer,
+GR,Devoxx Greece,,,,,,,,,,
+GR,Devoxx Greece,,,,,,,,,,
+FR,Devoxx France,,,,,,,,,,
+FR,Devoxx France,,,,,,,,,,
+DE,JavaLand,,,Cloud IDE,,,,,,,
+FR,KubeCon Rejekts,,2024-03-18,,,,,,,,
